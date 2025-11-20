@@ -13,7 +13,7 @@ export interface Movement {
 
 export interface Settings {
   interval: number // seconds
-  duration: number // minutes
+  duration: number // seconds
   enabledCategories: MovementCategory[]
   useVoice: boolean
   useBeep: boolean

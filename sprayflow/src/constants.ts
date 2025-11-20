@@ -68,7 +68,7 @@ export const MOVEMENTS: Movement[] = [
 
 export const DEFAULT_SETTINGS = {
   interval: 5,
-  duration: 5,
+  duration: 300, // 5 minutes in seconds
   enabledCategories: MOVEMENT_CATEGORIES,
   useVoice: true,
   useBeep: false,
