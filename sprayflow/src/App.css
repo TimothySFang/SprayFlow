@@ -1,0 +1,29 @@
+.app-container {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.cue-card {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movement-name {
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 0.5rem;
+  }
+  
+  .cue-card {
+    min-height: 150px;
+  }
+}
