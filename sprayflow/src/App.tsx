@@ -291,16 +291,23 @@ function App() {
 
   return (
     <Container size="sm" py="xl" className="app-container">
-      <Stack gap="lg">
-        <Title order={1} ta="center" c="blue">
-          SprayFlow
-        </Title>
-        <Text ta="center" c="dimmed" size="sm">
+      <Stack gap="lg" >
+        <img 
+          src="/logo.png" 
+          alt="SprayFlow" 
+          style={{ 
+            maxWidth: '250px', 
+            height: 'auto', 
+            margin: '0 auto',
+            display: 'block'
+          }} 
+        />
+        <Text ta="center" c="#656564" size="sm">
           Movement metronome for spray wall warmups
         </Text>
 
         {sessionState === "idle" && (
-          <Paper p="md" withBorder>
+          <Paper p="md" withBorder bg="#F0F0F0">
             <Stack gap="md">
               <Title order={3}>Settings</Title>
 
@@ -409,6 +416,7 @@ function App() {
                 onClick={startSession}
                 disabled={settings.enabledCategories.length === 0}
                 fullWidth
+                color="#E58D6D"
               >
                 Start Session
               </Button>
@@ -425,7 +433,7 @@ function App() {
                 </Text>
                 {currentMovement && (
                   <>
-                    <Badge size="lg" variant="light" color="blue">
+                    <Badge size="lg" variant="light" color="custom">
                       {CATEGORY_LABELS[currentMovement.category]}
                     </Badge>
                     <Title order={1} className="movement-name">
@@ -441,7 +449,7 @@ function App() {
                 <ActionIcon
                   size="xl"
                   variant="filled"
-                  color="blue"
+                  color="custom"
                   onClick={pauseSession}
                 >
                   <IconPlayerPause size={24} />
